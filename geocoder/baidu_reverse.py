@@ -20,7 +20,7 @@ class BaiduReverseResult(OneResult):
 
     @property
     def country(self):
-        return self.raw['addressComponent']['country']
+        return self.raw['addressComponent']['country_code_iso2']
 
     @property
     def province(self):
@@ -46,6 +46,13 @@ class BaiduReverseResult(OneResult):
     def housenumber(self):
         return self.raw['addressComponent']['street_number']
 
+    @property
+    def lat(self):
+        return self.raw['location']['lat']
+
+    @property
+    def lng(self):
+        return self.raw['location']['lng']
 
 class BaiduReverse(BaiduQuery):
     """
