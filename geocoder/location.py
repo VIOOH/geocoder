@@ -124,7 +124,7 @@ class Location(object):
 
     def __str__(self):
         if self.ok:
-            return u'{0}, {1}'.format(self.lat, self.lng)
+            return u'{0},{1}'.format(self.lat, self.lng)
         return u''
 
 
