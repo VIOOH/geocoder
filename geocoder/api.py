@@ -70,6 +70,8 @@ from geocoder.google_reverse import GoogleReverse
 from geocoder.google_elevation import ElevationQuery
 from geocoder.google_places import PlacesQuery
 
+from geocoder.baidu_timezone import BaiduTimezone
+
 options = {
     'osm': {
         'geocode': OsmQuery,
@@ -85,7 +87,8 @@ options = {
     },
     'baidu': {
         'geocode': BaiduQuery,
-        'reverse': BaiduReverse
+        'reverse': BaiduReverse,
+        'timezone': BaiduTimezone
     },
     'gaode': {
         'geocode': GaodeQuery,
